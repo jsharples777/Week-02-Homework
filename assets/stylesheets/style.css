@@ -1,0 +1,229 @@
+:root {
+  --headingColour: #13293d;
+  --navigationColour: aquamarine;
+  --footerColour: #13293d; 
+  --backgroundAqua: aquamarine;
+  --backgroundHeading: #13293d;
+  --lineColour: #13293d;
+  --contentFontColour: #13293d;
+  --headingFontSize: 24pt;
+  --navigationFontSize: 14pt;
+  --subHeadingFontSize: 18pt;
+  --projectFontSize: 12pt;
+  --projectSubHeadingFontSize: 8pt;
+  --contentFontSize: 10pt;
+
+}
+
+
+a {
+  background-attachment: scroll;
+  color:inherit;
+}
+
+.header {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    background: var(--backgroundHeading);
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .pageHeader {
+    font-size: var(--headingFontSize);
+    flex: 1 0 20%;
+    text-align: right;
+    color: var(--headingColour);
+    background: var(--backgroundAqua);
+    padding-top:40px;
+    position: relative;
+    margin-left: -20px;
+    margin-top: -20px;   
+}
+  
+  .navigation {
+    flex: 4 1 80%;
+    align-items: flex-end;
+  }
+  
+  
+  .navigationBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
+  
+
+  .navigationBar li {
+    color: var(--navigationColour);
+    padding: 14px 14px;
+    text-decoration: underline;
+    text-align: center;
+    flex: 0 1 15%;
+    font-size: var(--navigationFontSize);
+  }
+
+  .subHeadingImage {
+    max-width: 100%;
+    width: 100%;
+    /* background-color: var(--backgroundAqua); */
+    /* color: var(--headingColour); */
+  }
+
+  .subHeadingImage img {
+    width: 100%;
+    height: 100px;
+    background-color:rgb(60 71 183 / 50%);
+  }
+
+  .subHeadingText {
+    font-size: var(--subHeadingFontSize);
+    color: var(--headingColour);
+    background-color: var(--backgroundAqua);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    position: relative;
+    margin-left: 77%;
+    margin-top: -55px;
+    width:20%;
+  }
+  
+  footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--backgroundHeading);
+    color: var(--footerColour);
+    margin-top: auto;
+  }
+  
+  .allContentSections {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom:40px;
+  }
+
+  .contentSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 30px;
+    margin: 2px 0 auto;
+  }
+
+  .contentHeader {
+    flex: 0 1 20%;
+    text-align: right;
+    padding-right: 20px;
+    font-size:var(--subHeadingFontSize);
+    color: var(--headingColour);
+
+  }
+
+  .textContent {
+    flex: 1 1 70%;
+    color: var(--contentColour);
+    font-size: var(--contentFontSize);
+    line-height:1.2;
+    margin: 0px 20px 0px 40px;
+  }
+
+  .verticalLine {
+    border-left: thick solid var(--lineColour);
+  }
+
+  .projectCards {
+    flex: 1 1 70%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 20px 0px 40px;
+  }
+
+  .projectMain {
+    flex: 1 1 100%;
+  }
+
+  .projectMain img {
+    width:100%;
+    height: 100%;
+    filter:blur(2px) sepia(30%) hue-rotate(180deg) saturate(2);
+    transition: 100ms;
+  }
+
+  .projectMain img:hover {
+    filter: none;
+    transition: 100ms;
+  }
+
+  .project {
+    flex: 1 1 40%;
+    margin-top: 20px;
+  }
+
+  .project img {
+    width:100%;
+    height: 100px;
+    filter:blur(2px) sepia(30%) hue-rotate(180deg) saturate(2);
+    transition: 100ms;
+  }
+
+  .project img:hover {
+    filter: none;
+    transition: 100ms;
+  }
+
+  .projectTextbox {
+    background-color: var(--backgroundAqua);
+    color: var(--headingColour);
+    padding: 10px 14px 10px 14px;
+    line-height: 1.5;
+    position:relative;
+    margin-left:2%;
+    margin-top:-80px;
+    width:200px;
+  }
+
+  .projectTitle {
+    font-size: var(--projectFontSize);
+  }
+
+  .projectSubtitle {
+    font-size: var(--projectSubHeadingFontSize);
+    text-transform: uppercase;
+  }
+
+  .projectCardSpacer {
+    flex:0 1 20px;
+  }
+
+  .contactDetails {
+    flex: 1 1 70%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 20px 0px 40px;  
+  }
+  
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+
+    .navigationBar {
+      flex-direction: column;
+    }
+
+    .projectCardSpacer {
+      flex: 0 0 0%;
+    }
+  
+
+  }

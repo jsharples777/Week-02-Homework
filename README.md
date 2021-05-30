@@ -33,6 +33,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Not Done
 No recent photo is part of the template mockup
+
 No links to work as not yet available
 
 

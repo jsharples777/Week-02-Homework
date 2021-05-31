@@ -1,3 +1,8 @@
+/*
+  Global variables for 
+  1.  Font Size;
+  2.  Colours of background and fonts.
+*/
 :root {
   --headingColour: #13293d;
   --navigationColour: aquamarine;
@@ -19,17 +24,27 @@
 
 }
 
-
+/*
+  Ask the browser to scroll to links
+*/
 a {
   background-attachment: scroll;
   color:inherit;
 }
 
+/* body background colour */
 body {
   background-color: var(--bodyBackground);
 }
 
-
+/*
+  Header class
+  1.  header for the container for the navigation and page heading
+  2.  pageHeader for the container for the page heading text
+  3.  navigation for the container for the navigation bar items
+  4.  navigationBar - container for the navigation list items
+  5.  navigation list item format 
+*/
 .header {
     display: flex;
     padding: 10px;
@@ -75,6 +90,11 @@ body {
     font-size: var(--navigationFontSize);
   }
 
+  /*
+    Classes for
+    1.  Subheading image
+    2.  Subheading text container
+  */
   .subHeadingImage {
     max-width: 100%;
     width: 100%;
@@ -93,11 +113,13 @@ body {
     padding: 10px 10px 10px 10px;
     text-align: center;
     position: relative;
-    margin-left: 77%;
+    margin-left:65vw;
+    margin-right:5%;
     margin-top: -55px;
-    width:20%;
+    width:300px;
   }
   
+  /* Footer */
   footer {
     padding: 20px;
     text-align: center;
@@ -106,6 +128,7 @@ body {
     margin-top: auto;
   }
   
+  /* Container for the content sections of the page */
   .allContentSections {
     display: flex;
     flex-direction: column;
@@ -113,6 +136,7 @@ body {
     margin-bottom:40px;
   }
 
+  /* container for each content section (About Me, etc) */
   .contentSection {
     display: flex;
     flex-direction: row;
@@ -120,7 +144,7 @@ body {
     padding-top: 30px;
     margin: 2px 0 auto;
   }
-
+  /* container for the text heading for the content section (About Me, Work) */
   .contentHeader {
     flex: 0 1 20%;
     text-align: right;
@@ -129,7 +153,12 @@ body {
     color: var(--headingColour);
 
   }
-
+  /* vertical line separator between content header and the content to the right of the bar */
+  .verticalLine {
+    border-left: thick solid var(--lineColour);
+    padding-right:40px;
+  }
+  /* Text only content to the right of the vertical separator */
   .textContent {
     flex: 1 1 70%;
     color: var(--contentColour);
@@ -138,10 +167,13 @@ body {
     margin: 0px 0px 0px 0px;
   }
 
-  .verticalLine {
-    border-left: thick solid var(--lineColour);
-    padding-right:40px;
-  }
+  
+  /* content details for project display including:
+     1.  projectMain - the main project (the first one taking up the entire space)
+     2.  project - the sub projects under the main project
+     3.  img effects for the projects and removal of the effect on mouse hover 
+  */
+
 
   .projectCards {
     flex: 1 1 70%;
@@ -185,8 +217,8 @@ body {
     transition: 100ms;
   }
 
+  /* container for the text to overlay on a project image */
   .projectTextbox {
-    /* display:inline-block; */
     background-color: var(--backgroundAqua);
     color: var(--headingColour);
     line-height: 1.5;
@@ -195,20 +227,18 @@ body {
     margin-top:-80px;
     width:200px;
   }
-
+  /* project title */
   .projectTitle {
     font-size: var(--projectFontSize);
   }
-
+  /* project subtitle */
   .projectSubtitle {
     font-size: var(--projectSubHeadingFontSize);
     text-transform: uppercase;
   }
 
-  .projectCardSpacer {
-    flex:0 1 20px;
-  }
-
+ 
+  /* container class for the contact details section */
   .contactDetails {
     flex: 1 1 70%;
     display:flex;
@@ -225,7 +255,7 @@ body {
     padding: 10px 10px 10px 10px;
   }
   
-
+/* adjust flex layout for smaller screens */
 @media screen and (max-width: 768px) {
     main,
     nav {
@@ -238,6 +268,10 @@ body {
 
     .contactDetails {
       flex-direction: column;
+    }
+
+    .subHeadingText {
+      margin-left: 50vw;
     }
   
 

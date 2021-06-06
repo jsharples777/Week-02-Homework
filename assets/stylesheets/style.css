@@ -41,23 +41,19 @@ body {
   Header class
   1.  header for the container for the navigation and page heading
   2.  pageHeader for the container for the page heading text
-  3.  navigation for the container for the navigation bar items
-  4.  navigationBar - container for the navigation list items
-  5.  navigation list item format 
+  3.  navigation  item format 
 */
 .header {
-    /* display: flex; */
+
     padding: 10px;
     text-align: center;
     background: var(--backgroundHeading);
-    /* flex-direction: row; */
     max-width: 100%;
     width: 100%;
   }
 
   .pageHeader {
     font-size: var(--headingFontSize);
-    /* flex: 1 0 20%; */
     text-align: right;
     color: var(--headingColour);
     background: var(--backgroundAqua);
@@ -67,26 +63,12 @@ body {
     margin-top: -20px;   
 }
   
-  /* .navigation {
-    flex: 4 1 80%;
-    align-items: flex-end;
-  } */
-  
-  
-  /* .navigationBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    
-  } */
   
 
   .navigationBarItem {
     color: var(--navigationColour);
-    /* padding: 14px 14px; */
     text-decoration: underline;
     text-align: center;
-    /* flex: 0 1 15%; */
     font-size: var(--navigationFontSize);
   }
 
@@ -130,75 +112,49 @@ body {
   
   /* Container for the content sections of the page */
   .allContentSections {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; */
     margin-bottom:40px;
   }
 
   /* container for each content section (About Me, etc) */
   .contentSection {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; */
     padding-top: 30px;
     padding-left: 40px;
     margin: 2px 0 auto;
   }
   /* container for the text heading for the content section (About Me, Work) */
   .contentHeader {
-    /* flex: 0 1 20%; */
     text-align: right;
     padding-right: 20px;
+    padding-bottom:20px;
     font-size:var(--subHeadingFontSize);
     color: var(--headingColour);
 
   }
 
-  .row.match-my-cols {
-    overflow: hidden; 
-}
-
-.row.match-my-cols [class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-}
 
   /* vertical line separator between content header and the content to the right of the bar */
   .verticalLine {
     border-left: thick solid var(--lineColour);
-    padding-right:80px;
+    padding-left:40px;
     height: 100%;
   }
   /* Text only content to the right of the vertical separator */
   .textContent {
-    /* flex: 1 1 70%; */
     color: var(--contentColour);
     font-size: var(--contentFontSize);
     line-height:1.2;
     margin: 0px 0px 0px 0px;
   }
 
+  .textContentPadding {
+    padding-left: 55px;
+
+  }
   
   /* content details for project display including:
-     1.  projectMain - the main project (the first one taking up the entire space)
-     2.  project - the sub projects under the main project
-     3.  img effects for the projects and removal of the effect on mouse hover 
+     1.  img effects for the projects and removal of the effect on mouse hover 
   */
 
-
-  /* .projectCards {
-    flex: 1 1 70%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .projectMain {
-    flex: 1 1 100%;
-    padding: 0px 10px 20px 0px;
-  } */
 
   .projectImage {
     width:100%;
@@ -217,22 +173,6 @@ body {
     transition: 100ms;
   }
 
-  /* .project {
-    flex: 1 1 50%;
-    padding: 10px 10px 30px 0px;
-  }
-
-  .project img {
-    width:100%;
-    height: 100px;
-    filter:blur(2px) sepia(30%) hue-rotate(180deg) saturate(2);
-    transition: 100ms;
-  }
-
-  .project img:hover {
-    filter: none;
-    transition: 100ms;
-  } */
 
   /* container for the text to overlay on a project image */
   .projectTextbox {
@@ -254,42 +194,12 @@ body {
     text-transform: uppercase;
   }
 
- 
-  /* container class for the contact details section */
-  /* .contactDetails {
-    flex: 1 1 70%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  } */
+
 
   .contactDetailsItem {
-    /* flex: 1 1 20%; */
     color: var(--headingColour);
     font-size: var(--navigationFontSize);
     text-decoration: underline;
-    padding: 10px 10px 10px 10px;
+    text-align: center;
   }
   
-/* adjust flex layout for smaller screens
-@media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
-
-    .navigationBar {
-      flex-direction: column;
-    }
-
-    .contactDetails {
-      flex-direction: column;
-    }
-
-    .subHeadingText {
-      margin-left: 50vw;
-    }
-  
-
-  } */

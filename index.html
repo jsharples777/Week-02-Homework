@@ -6,91 +6,113 @@
         <title>Jim Sharples Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="./assets/stylesheets/reset.css">
         <link rel="stylesheet" href="./assets/stylesheets/style.css">
     </head>
     <body>
-        <div class="header">
-            <h1 class="pageHeader">Portfolio</h1>
-            <div class="navigation">
-                <ul class="navigationBar">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                </ul>
+        <div class="container-fluid header">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h1 class="pageHeader">Portfolio</h1>
+                </div>
+                <div class="col-sm-5"></div>
+                <div class="col-sm-1 navigationBarItem"><a href="#about">About Me</a></div>
+                <div class="col-sm-1 navigationBarItem"><a href="#work">Work</a></div>
+                <div class="col-sm-1 navigationBarItem"><a href="#contact">Contact Me</a></div>
+                <div class="col-sm-1 navigationBarItem"><a href="#resume">Resume</a></div>
             </div>
         </div>
         <div class="subHeadingImage">
             <img src="./assets/images/subHeadingBar.png" alt="Background"/>
             <div class="subHeadingText">A Few Projects</div>
-
         </div>
-        <div class="allContentSections">
-            <div class="contentSection">
-                <h2 class="contentHeader"><a id="about"></a>About<br>Me</h2>
-                <div class="verticalLine"></div>
-                <div class="textContent">
+        <div class="container-fluid allContentSections">
+            <div class="row contentSection">
+                <div class="col-sm-3 contentHeader">
+                    <a id="about"></a>About<br>Me
+                </div>
+
+                <div class="col-sm-1 verticalLine"></div>
+                <div class="col-sm-8 textContent">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum sit amet sapien quis mollis. Nulla volutpat aliquam orci, non commodo urna interdum sed. Nullam vel ipsum egestas, iaculis augue et, bibendum turpis. Donec et nunc accumsan, tincidunt ligula id, eleifend orci. Duis varius quam viverra pellentesque malesuada. Sed tempor convallis ante ut tempus. Fusce volutpat, metus sed dictum hendrerit, arcu justo placerat turpis, venenatis vulputate arcu justo in leo. Aliquam faucibus purus quis ante maximus condimentum. Morbi convallis ipsum nec porttitor tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Morbi porttitor pellentesque erat quis imperdiet.
                     <br><br>
                     Vestibulum lacinia tellus non porta vestibulum. Aliquam sit amet lectus massa. Sed auctor a enim ut dignissim. Praesent eu eros quis ex aliquet scelerisque a vitae felis. Sed in porta ante. Nam sodales enim quis libero malesuada facilisis in quis massa. Sed turpis leo, porta vel maximus scelerisque, consequat a lectus. Aenean semper ligula sit amet mauris convallis hendrerit. Morbi fringilla sapien erat, a viverra nulla mollis quis.
                 </div>
             </div>
-            <div class="contentSection">
-                <h2 class="contentHeader"><a id="work"></a>Work</h2>
-                <div class="verticalLine"></div>
-                <div class="projectCards">
-                    <div class="projectMain">
-                        <img class="projectImage" src="./assets/images/server-2160321_1280.jpg" alt="Distributed Systems"/>
-                        <div class="projectTextbox">
-                            <span class="projectTitle">Distributed Systems</span>
-                            <br>
-                            <span class="projectSubtitle">Node.js, Mongo DB</span>
+            <div class="row match-my-cols contentSection">
+                <div class="col-sm-3 contentHeader">
+                    <a id="work"></a>Work
+                </div>
+                <div class="col-sm-1 verticalLine"></div>
+                <div class="col-sm-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <img class="projectImage bottomPaddingForImage" src="./assets/images/server-2160321_1280.jpg" alt="Distributed Systems"/>
+                                <div class="projectTextbox">
+                                    <span class="projectTitle">Distributed Systems</span>
+                                    <br>
+                                    <span class="projectSubtitle">Node.js, Mongo DB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img class="projectImage bottomPaddingForImage" src="./assets/images/abstract-6133076_1280.jpg" alt="Abstract Systems Ltd."/>
+                                <div class="projectTextbox">
+                                    <span class="projectTitle">Abstract Systems Ltd</span>
+                                    <br>
+                                    <span class="projectSubtitle">Javascript, React, Express</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="projectImage bottomPaddingForImage" src="./assets/images/floppy-disks-5150360_1280.jpg" alt="Storage Solutions"/>
+                                <div class="projectTextbox">
+                                    <span class="projectTitle">Storage Solutions</span>
+                                    <br>
+                                    <span class="projectSubtitle">MySQL, Angular</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img class="projectImage bottomPaddingForImage" src="./assets/images/painting-1067686_1280.jpg" alt="Art Systems Ltd"/>
+                                <div class="projectTextbox">
+                                    <span class="projectTitle">Art Systems Ltd</span>
+                                    <br>
+                                    <span class="projectSubtitle">Dynamic HTML 5</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="projectImage bottomPaddingForImage" src="./assets/images/pen-3006462_1280.jpg" alt="WebBloggers"/>
+                                <div class="projectTextbox">
+                                    <span class="projectTitle">WebBloggers</span>
+                                    <br>
+                                    <span class="projectSubtitle">MERN</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="project">
-                        <img class="projectImage" src="./assets/images/abstract-6133076_1280.jpg" alt="Abstract Systems Ltd."/>
-                        <div class="projectTextbox">
-                            <span class="projectTitle">Abstract Systems Ltd</span>
-                            <br>
-                            <span class="projectSubtitle">Javascript, React, Express</span>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img class="projectImage" src="./assets/images/floppy-disks-5150360_1280.jpg" alt="Storage Solutions"/>
-                        <div class="projectTextbox">
-                            <span class="projectTitle">Storage Solutions</span>
-                            <br>
-                            <span class="projectSubtitle">MySQL, Angular</span>
-                        </div>
-                    </div>  
-                    <div class="project">
-                        <img class="projectImage" src="./assets/images/painting-1067686_1280.jpg" alt="Art Systems Ltd"/>
-                        <div class="projectTextbox">
-                            <span class="projectTitle">Art Systems Ltd</span>
-                            <br>
-                            <span class="projectSubtitle">Dynamic HTML 5</span>
-                        </div>
-                    </div>  
-                    <div class="project">
-                        <img class="projectImage" src="./assets/images/pen-3006462_1280.jpg" alt="WebBloggers"/>
-                        <div class="projectTextbox">
-                            <span class="projectTitle">WebBloggers</span>
-                            <br>
-                            <span class="projectSubtitle">MERN</span>
-                        </div>
-                    </div>  
                 </div>
             </div>
-            <div class="contentSection">
-                <h2 class="contentHeader"><a id="contact"></a>Contact Details</h2>
-                <div class="verticalLine"></div>
-                <div class="contactDetails">
-                    <div class="contactDetailsItem">(03) 5555 7777</div>
-                    <div class="contactDetailsItem">info@madeupemail.com</div>
-                    <div class="contactDetailsItem">LinkedIn</div>
-                    <div class="contactDetailsItem">GitHub</div>
-                </div>
+            <div class="row contentSection">
+                <div class="col-sm-3 contentHeader"><a id="contact"></a>Contact Details</div>
+                <div class="col-sm-1 verticalLine"></div>
+               
+                <div class="col-sm-2 contactDetailsItem">(03) 5555 7777</div>
+                <div class="col-sm-2 contactDetailsItem">info@madeupemail.com</div>
+                <div class="col-sm-2 contactDetailsItem">LinkedIn</div>
+                <div class="col-sm-2 contactDetailsItem">GitHub</div>
+                
             </div>
         </div>
         <footer></footer>

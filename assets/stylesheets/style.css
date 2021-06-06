@@ -16,7 +16,7 @@
   --bodyBackground:rgb(158, 163, 168 / 30%);
   
   --headingFontSize: 24pt;
-  --navigationFontSize: 14pt;
+  --navigationFontSize: 11pt;
   --subHeadingFontSize: 18pt;
   --projectFontSize: 12pt;
   --projectSubHeadingFontSize: 8pt;
@@ -46,18 +46,18 @@ body {
   5.  navigation list item format 
 */
 .header {
-    display: flex;
+    /* display: flex; */
     padding: 10px;
     text-align: center;
     background: var(--backgroundHeading);
-    flex-direction: row;
+    /* flex-direction: row; */
     max-width: 100%;
     width: 100%;
   }
 
   .pageHeader {
     font-size: var(--headingFontSize);
-    flex: 1 0 20%;
+    /* flex: 1 0 20%; */
     text-align: right;
     color: var(--headingColour);
     background: var(--backgroundAqua);
@@ -67,26 +67,26 @@ body {
     margin-top: -20px;   
 }
   
-  .navigation {
+  /* .navigation {
     flex: 4 1 80%;
     align-items: flex-end;
-  }
+  } */
   
   
-  .navigationBar {
+  /* .navigationBar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     
-  }
+  } */
   
 
-  .navigationBar li {
+  .navigationBarItem {
     color: var(--navigationColour);
-    padding: 14px 14px;
+    /* padding: 14px 14px; */
     text-decoration: underline;
     text-align: center;
-    flex: 0 1 15%;
+    /* flex: 0 1 15%; */
     font-size: var(--navigationFontSize);
   }
 
@@ -130,37 +130,49 @@ body {
   
   /* Container for the content sections of the page */
   .allContentSections {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
     margin-bottom:40px;
   }
 
   /* container for each content section (About Me, etc) */
   .contentSection {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
     padding-top: 30px;
+    padding-left: 40px;
     margin: 2px 0 auto;
   }
   /* container for the text heading for the content section (About Me, Work) */
   .contentHeader {
-    flex: 0 1 20%;
+    /* flex: 0 1 20%; */
     text-align: right;
     padding-right: 20px;
     font-size:var(--subHeadingFontSize);
     color: var(--headingColour);
 
   }
+
+  .row.match-my-cols {
+    overflow: hidden; 
+}
+
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
   /* vertical line separator between content header and the content to the right of the bar */
   .verticalLine {
     border-left: thick solid var(--lineColour);
-    padding-right:40px;
+    padding-right:80px;
+    height: 100%;
   }
   /* Text only content to the right of the vertical separator */
   .textContent {
-    flex: 1 1 70%;
+    /* flex: 1 1 70%; */
     color: var(--contentColour);
     font-size: var(--contentFontSize);
     line-height:1.2;
@@ -175,7 +187,7 @@ body {
   */
 
 
-  .projectCards {
+  /* .projectCards {
     flex: 1 1 70%;
     display:flex;
     flex-direction: row;
@@ -186,21 +198,26 @@ body {
   .projectMain {
     flex: 1 1 100%;
     padding: 0px 10px 20px 0px;
-  }
+  } */
 
-  .projectMain img {
+  .projectImage {
     width:100%;
     height: 100%;
     filter:blur(2px) sepia(30%) hue-rotate(180deg) saturate(2);
     transition: 100ms;
   }
 
-  .projectMain img:hover {
+  .bottomPaddingForImage {
+    padding-bottom: 60px;
+  }
+
+
+  .projectImage:hover {
     filter: none;
     transition: 100ms;
   }
 
-  .project {
+  /* .project {
     flex: 1 1 50%;
     padding: 10px 10px 30px 0px;
   }
@@ -215,7 +232,7 @@ body {
   .project img:hover {
     filter: none;
     transition: 100ms;
-  }
+  } */
 
   /* container for the text to overlay on a project image */
   .projectTextbox {
@@ -224,7 +241,7 @@ body {
     line-height: 1.5;
     position:relative;
     margin-left:10px;
-    margin-top:-80px;
+    margin-top:-140px;
     width:200px;
   }
   /* project title */
@@ -239,23 +256,23 @@ body {
 
  
   /* container class for the contact details section */
-  .contactDetails {
+  /* .contactDetails {
     flex: 1 1 70%;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+  } */
 
   .contactDetailsItem {
-    flex: 1 1 20%;
+    /* flex: 1 1 20%; */
     color: var(--headingColour);
     font-size: var(--navigationFontSize);
     text-decoration: underline;
     padding: 10px 10px 10px 10px;
   }
   
-/* adjust flex layout for smaller screens */
+/* adjust flex layout for smaller screens
 @media screen and (max-width: 768px) {
     main,
     nav {
@@ -275,4 +292,4 @@ body {
     }
   
 
-  }
+  } */

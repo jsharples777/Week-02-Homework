@@ -164,7 +164,7 @@ body {
   }
 
   .bottomPaddingForImage {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
 
@@ -181,7 +181,7 @@ body {
     line-height: 1.5;
     position:relative;
     margin-left:10px;
-    margin-top:-140px;
+    margin-top:-100px;
     width:200px;
   }
   /* project title */
